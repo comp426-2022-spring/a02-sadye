@@ -44,8 +44,11 @@ function coinFlip() {
  */
 
 function coinFlips(flips) {
-  
-
+  const results = []
+  for(i=0; i<flips; i++){
+    results[i] = coinFlip()
+  }
+  return results;
 }
 
 /** Count multiple flips
@@ -62,6 +65,19 @@ function coinFlips(flips) {
  */
 
 function countFlips(array) {
+  var headcount = 0
+  var tailcount = 0
+  for(i =0; i < array.length; i++){
+    if(array[i]=== "heads"){
+      headcount++
+    }else{
+      tailcount++
+    }
+  }
+  return{
+    tails: tailcount,
+    heads: headcount
+  }
 
 }
 
@@ -85,3 +101,4 @@ function flipACoin(call) {
  * 
  * Export all of your named functions
 */
+export {coinFlip, countFlips, countFlips, flipACoin}
