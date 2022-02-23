@@ -8,7 +8,7 @@ const call = args.call
 if(call === 'heads' | call === 'tails'){
     console.log(flipACoin(call))
 } else {
-    throw
+    console.error();
 }
 totalFlips = coinFlips(flips)
 console.log(totalFlips)
